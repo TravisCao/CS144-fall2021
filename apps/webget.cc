@@ -17,10 +17,10 @@ void get_URL(const string &host, const string &path) {
         auto recvd = socket.read();
         cout << recvd;
         if (socket.eof()) {
-            socket.close();
             break;
         }
     }
+    socket.close();
 
     // You will need to connect to the "http" service on
     // the computer whose name is in the "host" string,
